@@ -20,6 +20,18 @@ public class Deneme {
         //System.out.println("aaaaaaaaaaaa");
 
 
+        System.out.println("emrah");
+        System.out.println("emrah");
+        System.out.println("emrah");
+        System.out.println("emrah");
+        System.out.println("emrah");
+        System.out.println("emrah");
+
+
+
+
+
+
         //System.out.println("hakan conflict");
         //System.out.println("hakan 12conflict");
         
