@@ -12,9 +12,11 @@ public class Deneme {
         System.out.println("hakana code 4");
 
 
+        System.out.println("xdwwqxqw");
+        System.out.println("xwqdxwq");
+        System.out.println("xasxaxaxaxx");
+        System.out.println("xqkqlxwklsaklşsa");
+        //System.out.println("lllllllllllllllll");
+        //System.out.println("aaaaaaaaaaaa");
     }
-
-
-
-
 }
