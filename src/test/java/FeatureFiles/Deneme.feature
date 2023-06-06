@@ -6,3 +6,5 @@ Feature: Deneme
 
     Scenario: DENEME
       Given User should see main page
+      When deneme
+
