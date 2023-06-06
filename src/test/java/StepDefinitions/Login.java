@@ -98,6 +98,7 @@ public class Login {
             case "invalidA2":
                 dc.sendKeysFunction(dc.username,info.get(8).get(0));
                 dc.sendKeysFunction(dc.password,info.get(8).get(1));
+                dc.clickFunction(dc.loginBtn);
                 break;
         }
 

@@ -35,25 +35,25 @@
 
                 Given Navigate to Campus
                 When Enter "invalidS1" username and password with ApachePOI
-                Then User should login successfully
+                Then Invalid username or password message should be displayed
 
                 Scenario: Login as a Student (Negative-2)
 
                   Given Navigate to Campus
                   When Enter "invalidS2" username and password with ApachePOI
-                  Then User should login successfully
+                  Then Invalid username or password message should be displayed
 
                   Scenario: Login as an Admin (Negative-1)
 
                     Given Navigate to Campus
                     When Enter "invalidA1" username and password with ApachePOI
-                    Then User should login successfully
+                    Then Invalid username or password message should be displayed
 
                     Scenario: Login as an Admin (Negative-2)
 
                       Given Navigate to Campus
                       When Enter "invalidA2" username and password with ApachePOI
-                      Then User should login successfully
+                      Then Invalid username or password message should be displayed
 
 
 
