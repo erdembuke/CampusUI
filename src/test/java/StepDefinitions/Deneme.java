@@ -18,5 +18,12 @@ public class Deneme {
         System.out.println("xqkqlxwklsaklşsa");
         //System.out.println("lllllllllllllllll");
         //System.out.println("aaaaaaaaaaaa");
+
+        System.out.println("hakan conflict");
+        System.out.println("hakan 12conflict");
+        System.out.println("hakan 34conflict");
+        System.out.println("hakan 56conflict");
+        System.out.println("hakan 67conflict");
+
     }
 }
