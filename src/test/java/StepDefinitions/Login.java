@@ -64,6 +64,41 @@ public class Login {
                 dc.sendKeysFunction(dc.password,info.get(2).get(1));
                 dc.clickFunction(dc.loginBtn);
                 break;
+
+            case "invalidT1":
+                dc.sendKeysFunction(dc.username,info.get(3).get(0));
+                dc.sendKeysFunction(dc.password,info.get(3).get(1));
+                dc.clickFunction(dc.loginBtn);
+                break;
+
+            case "invalidT2":
+                dc.sendKeysFunction(dc.username,info.get(4).get(0));
+                dc.sendKeysFunction(dc.password,info.get(4).get(1));
+                dc.clickFunction(dc.loginBtn);
+                break;
+
+            case "invalidS1":
+                dc.sendKeysFunction(dc.username,info.get(5).get(0));
+                dc.sendKeysFunction(dc.password,info.get(5).get(1));
+                dc.clickFunction(dc.loginBtn);
+                break;
+
+            case "invalidS2":
+                dc.sendKeysFunction(dc.username,info.get(6).get(0));
+                dc.sendKeysFunction(dc.password,info.get(6).get(1));
+                dc.clickFunction(dc.loginBtn);
+                break;
+
+            case "invalidA1":
+                dc.sendKeysFunction(dc.username,info.get(7).get(0));
+                dc.sendKeysFunction(dc.password,info.get(7).get(1));
+                dc.clickFunction(dc.loginBtn);
+                break;
+
+            case "invalidA2":
+                dc.sendKeysFunction(dc.username,info.get(8).get(0));
+                dc.sendKeysFunction(dc.password,info.get(8).get(1));
+                break;
         }
 
     }
