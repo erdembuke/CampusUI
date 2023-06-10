@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.DialogContents;
 import Utilities.GWD;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -41,5 +42,10 @@ public class Calendar {
 
         Assert.assertEquals(count,6);
 
+    }
+
+    @And("Teacher-layout wait for load")
+    public void teacherLayoutWaitForLoad() {
+        dg.waitUntilRefreshLayout();
     }
 }

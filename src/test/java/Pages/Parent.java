@@ -64,4 +64,11 @@ public class Parent {
 
     }
 
+    public void waitUntilRefreshLayout(){
+
+        wait.until(ExpectedConditions.numberOfElementsToBe
+                (By.xpath("//teacher-layout/*") , 1));
+
+    }
+
 }
