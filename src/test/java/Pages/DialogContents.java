@@ -49,6 +49,15 @@ public class DialogContents extends Parent{
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     public WebElement successMessage;
 
+    @FindBy(css = "svg[data-icon='calendar']")
+    public WebElement calendarBtn;
+
+    @FindBy(id = "fc-dom-1")
+    public WebElement currentDate;
+
+    @FindBy(xpath = "//div[contains(text(),'11B')]")
+    public List<WebElement> courseNames;
+
     public WebElement getWebElement(String element){
 
         switch (element){
@@ -63,6 +72,7 @@ public class DialogContents extends Parent{
             case "periodsPopUpBtn": return periodsPopUpBtn;
             case "period_11_00": return period_11_00;
             case "saveBtn": return saveBtn;
+            case "calendarBtn": return calendarBtn;
 
         }
         return null;
