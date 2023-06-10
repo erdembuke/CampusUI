@@ -39,7 +39,7 @@ public class Calendar {
             System.out.println(count+".name" + courseName.getText());
         }
 
-
+        Assert.assertEquals(count,6);
 
     }
 }
