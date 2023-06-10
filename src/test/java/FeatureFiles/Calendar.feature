@@ -8,6 +8,7 @@ Feature: Calendar functionality
 
   Scenario: Planning a course
 
+    And Teacher-layout wait for load
     And Click on the element in NavigationTabs
       |calendarTab|
 
