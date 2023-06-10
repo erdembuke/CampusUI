@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -54,6 +55,13 @@ public class Parent {
 
     public void waitUntilTextToBe(WebElement element, String text){
         wait.until(ExpectedConditions.textToBePresentInElement(element,text));
+    }
+
+    public void waitUntilRefresh(){
+
+        wait.until(ExpectedConditions.numberOfElementsToBe
+                (By.xpath("//fuse-progress-bar/*") , 0));
+
     }
 
 }
