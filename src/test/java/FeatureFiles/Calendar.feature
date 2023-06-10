@@ -6,10 +6,10 @@ Background:
   When Enter "teacher" username and password with ApachePOI
   Then User should login successfully
 
-  Scenario: Planning a course
+  Given Click on the element in NavigationTabs
+    |calendarTab|
 
-    Given Click on the element in NavigationTabs
-      |calendarTab|
+  Scenario: Planning a course
 
     And Click on the element in Dialog Content
       |addBtn|
@@ -30,3 +30,10 @@ Background:
       |saveBtn|
 
     Then Success message should be displayed
+
+    Scenario: Monitorizing weekly and monthly basis courses in Calendar Feature
+
+      And Click on the element in Dialog Content
+        |calendarBtn|
+
+      Then Verify that all courses are displayed on weekly basis
