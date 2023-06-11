@@ -25,6 +25,7 @@ Feature: Calendar functionality
   Scenario: Monitorizing weekly and monthly basis courses in Calendar Feature
 
     And Teacher-layout wait for load
+
     And Click on the element in Dialog Content
       |calendarBtn|
 
