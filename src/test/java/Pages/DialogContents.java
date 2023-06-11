@@ -28,7 +28,7 @@ public class DialogContents extends Parent{
     @FindBy(css = "hot-toast[class='ng-star-inserted']")
     public WebElement errorTab;
 
-    @FindBy(css = "svg[data-icon='plus']")
+    @FindBy(xpath = "(//div/button)[11]")
     public WebElement addBtn;
 
     @FindBy(xpath = "(//span[text()='Course'])[1]")
