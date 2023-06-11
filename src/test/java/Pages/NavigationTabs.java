@@ -20,12 +20,20 @@ public class NavigationTabs extends Parent{
     @FindBy(xpath = "//span[contains(text(),'Staj 2023')]")
     public WebElement homepageText;
 
+    @FindBy(xpath = "//span[contains(text(),'Assignments')]")
+    public WebElement assignmentTab;
+
+    @FindBy(xpath = "(//button[@aria-haspopup='menu'])[1]")
+    public WebElement burgerMenu;
+
 
     public WebElement getWebElement(String element){
         switch (element) {
             case "coursesTab": return coursesTab;
             case "calendarTab": return calendarTab;
             case "homepageText": return homepageText;
+            case "assignmentTab": return assignmentTab;
+            case "burgerMenu": return burgerMenu;
         }
         return null;
     }

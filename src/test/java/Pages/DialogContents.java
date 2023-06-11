@@ -58,6 +58,56 @@ public class DialogContents extends Parent{
     @FindBy(xpath = "//div[contains(text(),'11B')]")
     public List<WebElement> courseNames;
 
+    @FindBy(xpath = "//span[contains(text(),'11B')]")
+    public WebElement homeCourses;
+
+    @FindBy(xpath = "(//span[contains(text(),'Details')])[1]")
+    public WebElement fizikDetailsBtn;
+
+    @FindBy(xpath = " //h3[contains(text(),'Total Amount of Course Materials')]")
+    public WebElement fizikCirruculumMaterials;
+
+    @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Name']")
+    public WebElement nameInput;
+
+    @FindBy(xpath = "//ms-search-button//button")
+    public WebElement searchBtn;
+
+    @FindBy(xpath = "//mat-select//span[contains(text(),'Course')]")
+    public WebElement dropDownCourse;
+
+    @FindBy(xpath = "//mat-select//span[contains(text(),'Type')]")
+    public WebElement dropDownType;
+
+    @FindBy(xpath = "//mat-select//span[contains(text(),'Grade Level')]")
+    public WebElement dropDownGradeLevel;
+    @FindBy(xpath = "//mat-option//span[contains(text(),'11B-Fizik')]")
+    public WebElement dropDownFizik;
+
+    @FindBy(xpath = "//mat-option//span[contains(text(),'Homework')]")
+    public WebElement dropDownHomework;
+
+    @FindBy(xpath = "//mat-option//span[contains(text(),'11')]")
+    public WebElement dropDown11;
+
+    @FindBy(xpath = "//td[contains(text(),'Published')]")
+    public WebElement publishConfirm;
+
+    @FindBy(xpath = "//strong[contains(text(),'11B-Fizik')]")
+    public WebElement fizikAssignment;
+
+    @FindBy(xpath = "//div[contains(text(),'Published')]")
+    public WebElement assignmentStatus;
+
+    @FindBy(xpath = "//button//span[contains(text(),'Student')]")
+    public WebElement burgerStudent;
+
+    @FindBy(xpath = "(//button//span[contains(text(),'Student')])[2]")
+    public WebElement burgerStudent2;
+
+    @FindBy(xpath = "//div[@class='mat-paginator-range-label']")
+    public WebElement rangeLabel;
+
     public WebElement getWebElement(String element){
 
         switch (element){
@@ -73,6 +123,12 @@ public class DialogContents extends Parent{
             case "period_11_00": return period_11_00;
             case "saveBtn": return saveBtn;
             case "calendarBtn": return calendarBtn;
+            case "fizikDetailsBtn": return fizikDetailsBtn;
+            case "fizikAssignment": return fizikAssignment;
+            case "searchBtn": return searchBtn;
+            case "burgerStudent": return burgerStudent;
+            case "burgerStudent2": return burgerStudent2;
+
 
         }
         return null;
