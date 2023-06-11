@@ -11,20 +11,28 @@ public class NavigationTabs extends Parent{
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(xpath = "//span[text()='Courses']")
+    @FindBy(css = "ms-layout-menu-button[page='COURSES']")
     public WebElement coursesTab;
 
-    @FindBy(xpath = "(//span[text()='Calendar'])[1]")
+    @FindBy(css = "ms-layout-menu-button[page='CALENDAR']")
     public WebElement calendarTab;
+
+    @FindBy(css = "ms-layout-menu-button[page='ASSIGNMENT']")
+    public WebElement assignmentTab;
+
+    @FindBy(css = "ms-layout-menu-button[page='ATTENDANCE']")
+    public WebElement attendanceTab;
+
+    @FindBy(css = "ms-layout-menu-button[page='GRADING']")
+    public WebElement gradingTab;
+
+    @FindBy(xpath = "(//button[@aria-haspopup='menu'])[1]")
+    public WebElement burgerMenu;
 
     @FindBy(xpath = "//span[contains(text(),'Staj 2023')]")
     public WebElement homepageText;
 
-    @FindBy(xpath = "//span[contains(text(),'Assignments')]")
-    public WebElement assignmentTab;
 
-    @FindBy(xpath = "(//button[@aria-haspopup='menu'])[1]")
-    public WebElement burgerMenu;
 
 
     public WebElement getWebElement(String element){
