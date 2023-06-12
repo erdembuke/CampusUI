@@ -33,6 +33,9 @@ public class Calendar {
                 case "11B-Kimya- (P)": dg.verifyContainsTextFunction(courseName,"Kimya"); count++;break;
                 case "11B-Fizik- (P)": dg.verifyContainsTextFunction(courseName,"Fizik"); count++;break;
                 case "11B-Kimya- (E)": dg.verifyContainsTextFunction(courseName,"Kimya"); count++;break;
+                case "11B-Fizik": dg.verifyContainsTextFunction(courseName,"Fizik"); count++;break;
+                case "11B-Kimya": dg.verifyContainsTextFunction(courseName,"Kimya"); count++;break;
+                case "11B-Kimya(Test)": dg.verifyContainsTextFunction(courseName,"Kimya(Test)"); count++;break;
 
             }
 
