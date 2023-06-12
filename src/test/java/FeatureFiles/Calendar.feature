@@ -26,6 +26,9 @@ Feature: Calendar functionality
 
     And Teacher-layout wait for load
 
+    And Click on the element in NavigationTabs
+      |calendarTab|
+
     And Click on the element in Dialog Content
       |calendarBtn|
 
