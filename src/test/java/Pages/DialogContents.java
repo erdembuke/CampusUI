@@ -108,6 +108,19 @@ public class DialogContents extends Parent{
     @FindBy(xpath = "//div[@class='mat-paginator-range-label']")
     public WebElement rangeLabel;
 
+    @FindBy(css = "[matbadgeposition='below']")
+    public WebElement plus;
+
+    @FindBy(xpath = "//span[text()='Apply']")
+    public WebElement apply;
+
+    @FindBy(xpath = "//body[@id='tinymce']/p")
+    public WebElement textArea;
+
+
+
+
+
     public WebElement getWebElement(String element){
 
         switch (element){
@@ -128,6 +141,9 @@ public class DialogContents extends Parent{
             case "searchBtn": return searchBtn;
             case "burgerStudent": return burgerStudent;
             case "burgerStudent2": return burgerStudent2;
+            case "plus": return plus;
+            case "apply": return apply;
+            case "textArea": return textArea;
 
 
         }
