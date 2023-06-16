@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class DialogContents extends Parent{
+public class DialogContents extends Parent {
 
-    public DialogContents(){
+    public DialogContents() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
@@ -125,36 +125,139 @@ public class DialogContents extends Parent{
 
     @FindBy(xpath = "(//div[@class='mat-tab-labels']/div)[5]")
     public WebElement recentEventsBtn;
+    @FindBy(css = "fa-icon[style='font-size: 24px;']>svg[class='svg-inline--fa fa-plus']")
+    public WebElement addAttach;
+    @FindBy(xpath = "//span[text()='Type']")
+    public WebElement typeBtn;
+    @FindBy(xpath = "//span[text()='Course']")
+    public WebElement courseBtn;
+    @FindBy(css = "svg[class='svg-inline--fa fa-calendar-day']")
+    public WebElement calendarIcon;
+    @FindBy(xpath = "//span[text()=' 11B-Fizik ']")
+    public WebElement chooseCourseFizik;
+    @FindBy(xpath = "//span[text()=' Homework ']")
+    public WebElement homeWorkBtn;
+    @FindBy(xpath = "//span[text()='Please select an item']")
+    public WebElement selectItemBtn;
+    @FindBy(xpath = "//span[text()='Select']")
+    public WebElement selectBtn;
+    @FindBy(xpath = "//span[text()='From My Files']")
+    public WebElement fromMyFilesBtn;
+
+    @FindBy(xpath = "(//span[text()='11B-FIZIK '])[1]")
+    public WebElement courseFizik;
+
+    @FindBy(xpath = "//span[text()='11B-FIZIK ']")
+    public List<WebElement> courseFizikCount;           // The count of Fizik courses for the current week
+    @FindBy(css = "svg[class='svg-inline--fa fa-pen-to-square']")  // count of attach files teacher's page
+    public List<WebElement> filesIconTeach;
+    @FindBy(css = "svg[class='svg-inline--fa fa-file-image']")    // count of attach files student's page
+    public List<WebElement> filesIconStud;
+    @FindBy(xpath = "//span[text()='Excel Export']")
+    public WebElement excelExportBtn;
+    @FindBy(xpath = "//span[text()='Course Term Grades']")
+    public WebElement courseTermGrades;
+    @FindBy(xpath = "//span[text()='Periods']")
+    public WebElement periodsBtn;
+    @FindBy(xpath = "//span[text()=' ( L4 ) 12:00  -  12:50 ']")
+    public WebElement periodsL4Btn;
+    @FindBy(xpath = "(//label[@class='mat-checkbox-layout'])[14]")
+    public WebElement uploadFile;
+    @FindBy(xpath = "//span[text()='Delete']")
+    public WebElement deleteBtn;
+    @FindBy(xpath = "//span[text()=' Delete ']")
+    public WebElement deleteConfirmBtn;
+
+    @FindBy(xpath = "//span[text()='Attachments']")
+    public WebElement attachmentBtn;
 
 
+    public WebElement getWebElement(String element) {
 
+        switch (element) {
+            case "username":
+                return username;
+            case "password":
+                return password;
+            case "rememberMeCheckBox":
+                return rememberMeCheckBox;
+            case "loginBtn":
+                return loginBtn;
+            case "errorTab":
+                return errorTab;
+            case "addBtn":
+                return addBtn;
+            case "coursePopUpBtn":
+                return coursePopUpBtn;
+            case "kimya11BTestPopUp":
+                return kimya11BTestPopUp;
+            case "periodsPopUpBtn":
+                return periodsPopUpBtn;
+            case "period_11_00":
+                return period_11_00;
+            case "saveBtn":
+                return saveBtn;
+            case "calendarBtn":
+                return calendarBtn;
+            case "fizikDetailsBtn":
+                return fizikDetailsBtn;
+            case "fizikAssignment":
+                return fizikAssignment;
+            case "searchBtn":
+                return searchBtn;
+            case "burgerStudent":
+                return burgerStudent;
+            case "burgerStudent2":
+                return burgerStudent2;
+            case "fizikCourseBtn":
+                return fizikCourseBtn;
+            case "topicBtn":
+                return topicBtn;
+            case "attandeesBtn":
+                return attandeesBtn;
+            case "attachmentsBtn":
+                return attachmentsBtn;
+            case "recentEventsBtn":
+                return recentEventsBtn;
+            case "addAttach":
+                return addAttach;
+            case "typeBtn":
+                return typeBtn;
+            case "homeWorkBtn":
+                return homeWorkBtn;
+            case "fromMyFilesBtn":
+                return fromMyFilesBtn;
+            case "selectItemBtn":
+                return selectItemBtn;
+            case "selectBtn":
+                return selectBtn;
+            case "uploadFile":
+                return uploadFile;
+            case "courseTermGrades":
+                return courseTermGrades;
+            case "excelExportBtn":
+                return excelExportBtn;
+            case "courseBtn":
+                return courseBtn;
+            case "chooseCourseFizik":
+                return chooseCourseFizik;
+            case "courseFizik":
+                return courseFizik;
+            case "attachmentBtn":
+                return attachmentBtn;
+            case "periodsBtn":
+                return periodsBtn;
+            case "periodsL4Btn":
+                return periodsL4Btn;
+            case "successMessage":
+                return successMessage;
+            case "deleteBtn":
+                return deleteBtn;
+            case "deleteConfirmBtn":
+                return deleteConfirmBtn;
+            case "calendarIcon":
+                return calendarIcon;
 
-
-    public WebElement getWebElement(String element){
-
-        switch (element){
-            case "username": return username;
-            case "password": return password;
-            case "rememberMeCheckBox": return rememberMeCheckBox;
-            case "loginBtn": return loginBtn;
-            case "errorTab": return errorTab;
-            case "addBtn": return addBtn;
-            case "coursePopUpBtn": return coursePopUpBtn;
-            case "kimya11BTestPopUp": return kimya11BTestPopUp;
-            case "periodsPopUpBtn": return periodsPopUpBtn;
-            case "period_11_00": return period_11_00;
-            case "saveBtn": return saveBtn;
-            case "calendarBtn": return calendarBtn;
-            case "fizikDetailsBtn": return fizikDetailsBtn;
-            case "fizikAssignment": return fizikAssignment;
-            case "searchBtn": return searchBtn;
-            case "burgerStudent": return burgerStudent;
-            case "burgerStudent2": return burgerStudent2;
-            case "fizikCourseBtn": return fizikCourseBtn;
-            case "topicBtn": return topicBtn;
-            case "attandeesBtn": return attandeesBtn;
-            case "attachmentsBtn": return attachmentsBtn;
-            case "recentEventsBtn": return recentEventsBtn;
 
         }
         return null;
