@@ -108,6 +108,28 @@ public class DialogContents extends Parent{
     @FindBy(xpath = "//div[@class='mat-paginator-range-label']")
     public WebElement rangeLabel;
 
+    @FindBy(xpath = "(//*[text()='11B-FIZIK '])[1]")
+    public WebElement fizikCourseBtn;
+
+    @FindBy(xpath = "(//div[@class='mat-tab-label-content'])[1]")
+    public WebElement informationBtn;
+
+    @FindBy(xpath = "(//div[@class='mat-tab-labels']/div)[2]")
+    public WebElement topicBtn;
+
+    @FindBy(xpath = "(//div[@class='mat-tab-labels']/div)[3]")
+    public WebElement attandeesBtn;
+
+    @FindBy(xpath = "(//div[@class='mat-tab-labels']/div)[4]")
+    public WebElement attachmentsBtn;
+
+    @FindBy(xpath = "(//div[@class='mat-tab-labels']/div)[5]")
+    public WebElement recentEventsBtn;
+
+
+
+
+
     public WebElement getWebElement(String element){
 
         switch (element){
@@ -128,7 +150,11 @@ public class DialogContents extends Parent{
             case "searchBtn": return searchBtn;
             case "burgerStudent": return burgerStudent;
             case "burgerStudent2": return burgerStudent2;
-
+            case "fizikCourseBtn": return fizikCourseBtn;
+            case "topicBtn": return topicBtn;
+            case "attandeesBtn": return attandeesBtn;
+            case "attachmentsBtn": return attachmentsBtn;
+            case "recentEventsBtn": return recentEventsBtn;
 
         }
         return null;
