@@ -42,6 +42,10 @@ public class NavigationTabs extends Parent{
             case "homepageText": return homepageText;
             case "assignmentTab": return assignmentTab;
             case "burgerMenu": return burgerMenu;
+            case "gradingTab":
+                return gradingTab;
+            case "attendanceTab":
+                return attendanceTab;
         }
         return null;
     }
