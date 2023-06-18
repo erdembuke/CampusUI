@@ -171,6 +171,17 @@ public class DialogContents extends Parent {
     @FindBy(xpath = "//span[text()='Attachments']")
     public WebElement attachmentBtn;
 
+    @FindBy(xpath = "(//mat-hint[contains(text(),'203')]//following-sibling::fa-icon)[2]")
+    public WebElement noteStudent_3_11B;
+
+    @FindBy(tagName = "textarea")
+    public WebElement noteBox;
+
+    @FindBy(css = "ms-icon-button[icon='paper-plane']")
+    public WebElement paperPlaneBtn;
+
+    @FindBy(xpath = "//ams-comment//bdi")
+    public WebElement sentMessage;
 
     public WebElement getWebElement(String element) {
 
@@ -257,6 +268,14 @@ public class DialogContents extends Parent {
                 return deleteConfirmBtn;
             case "calendarIcon":
                 return calendarIcon;
+            case "noteStudent_3_11B":
+                return noteStudent_3_11B;
+            case "noteBox":
+                return noteBox;
+            case "paperPlaneBtn":
+                return paperPlaneBtn;
+            case "sentMessage":
+                return sentMessage;
 
 
         }
