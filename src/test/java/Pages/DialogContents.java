@@ -117,6 +117,11 @@ public class DialogContents extends Parent{
     @FindBy(xpath = "//body[@id='tinymce']/p")
     public WebElement textArea;
 
+    @FindBy(css = "[class='ng-fa-icon'] [focusable='false'][data-icon='plus']")
+    public WebElement assignmentPlus;
+
+    @FindBy(xpath = "//span[text()='From Local']")
+    public WebElement fromLocal;
 
 
 
@@ -144,6 +149,8 @@ public class DialogContents extends Parent{
             case "plus": return plus;
             case "apply": return apply;
             case "textArea": return textArea;
+            case "assignmentPlus": return assignmentPlus;
+            case "fromLocal": return fromLocal;
 
 
         }
