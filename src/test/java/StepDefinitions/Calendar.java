@@ -22,27 +22,16 @@ public class Calendar {
     @Then("Verify that all courses are displayed on weekly basis")
     public void verifyThatAllCoursesAreDisplayedOnWeeklyBasis() {
 
-        int count=0;
-
         dg.waitUntilVisible(dg.currentDate);
+
+        int count=0;
 
         for (WebElement courseName :dg.courseNames) {
 
-
-            switch (courseName.getText()){
-                case "11B-Kimya(Test)- (E)": dg.verifyContainsTextFunction(courseName,"Kimya(Test)"); count++;break;
-                case "11B-Kimya- (P)": dg.verifyContainsTextFunction(courseName,"Kimya"); count++;break;
-                case "11B-Fizik- (P)": dg.verifyContainsTextFunction(courseName,"Fizik"); count++;break;
-                case "11B-Kimya- (E)": dg.verifyContainsTextFunction(courseName,"Kimya"); count++;break;
-                case "11B-Fizik": dg.verifyContainsTextFunction(courseName,"Fizik"); count++;break;
-                case "11B-Kimya": dg.verifyContainsTextFunction(courseName,"Kimya"); count++;break;
-                case "11B-Kimya(Test)": dg.verifyContainsTextFunction(courseName,"Kimya(Test)"); count++;break;
-
+            if (courseName.getText().toLowerCase().contains("kimya") || courseName.getText().toLowerCase().contains("fizik")){
+                count++;
             }
-
-            System.out.println(count+".name" + courseName.getText());
         }
-
         Assert.assertEquals(count,6);
 
     }
