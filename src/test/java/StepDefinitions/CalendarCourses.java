@@ -56,4 +56,10 @@ public class CalendarCourses {
 //        System.out.println("countFileIconStud = " + countFileIconStud);
         Assert.assertEquals(countFileIconTeach, countFileIconStud, "Test Failed");
     }
+
+    @Then("Verify the download button clickable")
+    public void verifyTheDownloadButtonClickable() {
+        dc.waitUntilClickable(dc.downloadButton);
+        Assert.assertTrue(dc.downloadButton.isEnabled());
+    }
 }

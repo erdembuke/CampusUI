@@ -6,7 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,6 +17,7 @@ public class GWD {
 
     private static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>(); // webDriver1, webDriver2..
     private static ThreadLocal<String> threadBrowserName = new ThreadLocal<>(); // chrome, firefox..
+    private static WebDriverWait wait;
 
     public static WebDriver getDriver(){
         Locale.setDefault(new Locale("EN"));
@@ -65,6 +68,13 @@ public class GWD {
             driver = null;
             threadDriver.set(driver);
         }
+    }
+
+    public static WebDriverWait getWait() {
+        if (wait == null) {
+            wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        }
+        return wait;
     }
 
     public static void threadBrowserSet(String browser) {threadBrowserName.set(browser);}

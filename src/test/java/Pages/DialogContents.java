@@ -1,9 +1,11 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
@@ -170,6 +172,15 @@ public class DialogContents extends Parent {
 
     @FindBy(xpath = "//span[text()='Attachments']")
     public WebElement attachmentBtn;
+    @FindBy(css = "mat-progress-bar[class='mat-progress-bar mat-accent ng-star-inserted']")
+    public WebElement progressBar;
+    @FindBy(xpath = "(//ms-standard-button//button)[1]")
+    public WebElement downloadButton;
+
+    @FindBy(xpath = "(//ms-add-button//button)[1]")
+    public WebElement msaddbutton;
+    @FindBy(xpath = "(//button[@aria-label='Close dialog'])[2]")
+    public WebElement closeButton2;
 
 
     public WebElement getWebElement(String element) {
@@ -242,6 +253,7 @@ public class DialogContents extends Parent {
             case "chooseCourseFizik":
                 return chooseCourseFizik;
             case "courseFizik":
+                GWD.getWait().until(ExpectedConditions.invisibilityOf(progressBar));
                 return courseFizik;
             case "attachmentBtn":
                 return attachmentBtn;
@@ -257,6 +269,13 @@ public class DialogContents extends Parent {
                 return deleteConfirmBtn;
             case "calendarIcon":
                 return calendarIcon;
+            case "downloadButton":
+                GWD.getWait().until(ExpectedConditions.elementToBeClickable(downloadButton));
+                return downloadButton;
+            case "msaddbutton":
+                return msaddbutton;
+            case "closeButton2":
+                return closeButton2;
 
 
         }
