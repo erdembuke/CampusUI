@@ -74,7 +74,7 @@ public class DialogContents extends Parent {
     @FindBy(xpath = "//ms-search-button//button")
     public WebElement searchBtn;
 
-    @FindBy(xpath = "//mat-select//span[contains(text(),'Course')]")
+    @FindBy(css = "mat-select[formcontrolname='courseId']")
     public WebElement dropDownCourse;
 
     @FindBy(xpath = "//mat-select//span[contains(text(),'Type')]")
@@ -205,6 +205,9 @@ public class DialogContents extends Parent {
     @FindBy(xpath = "//span[text()='From Local']")
     public WebElement fromLocal;
 
+    @FindBy(css = "[matbadgeposition='below']")
+    public WebElement plus;
+
 
     public WebElement getWebElement(String element) {
 
@@ -315,6 +318,8 @@ public class DialogContents extends Parent {
                 return assignmentPlus;
             case "fromLocal":
                 return fromLocal;
+            case "plus":
+                return plus;
             
         }
         return null;

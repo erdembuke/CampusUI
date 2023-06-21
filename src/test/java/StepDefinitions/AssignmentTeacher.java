@@ -18,7 +18,7 @@ public class AssignmentTeacher {
     @And("Fill the Text Description")
     public void fillTheTextDescription() {
         GWD.getDriver().switchTo().frame(0);
-        dc.sendKeysFunction(dc.textArea,"axxaaxaxa");
+        dc.sendKeysFunction(dc.textArea,"deneme icerik");
         GWD.getDriver().switchTo().parentFrame();
     }
 
