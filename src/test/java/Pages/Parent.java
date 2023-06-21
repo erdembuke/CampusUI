@@ -41,6 +41,14 @@ public class Parent {
         Assert.assertTrue(element.isDisplayed());
     }
 
+    public void waitUntilStale(WebElement element){
+        wait.until(ExpectedConditions.stalenessOf(element));
+    }
+
+    public void waitIframeReady(WebElement element){
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
+    }
+
     public void scrollToElement(WebElement element){
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);

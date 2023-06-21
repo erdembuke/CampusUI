@@ -32,6 +32,9 @@ public class NavigationTabs extends Parent{
     @FindBy(xpath = "//span[contains(text(),'Staj 2023')]")
     public WebElement homepageText;
 
+    @FindBy(xpath = "//iframe[contains(@id,'tiny-angular')]")
+    public WebElement iframe1;
+
 
 
 

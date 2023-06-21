@@ -73,7 +73,7 @@ public class DialogContents extends Parent{
     @FindBy(xpath = "//ms-search-button//button")
     public WebElement searchBtn;
 
-    @FindBy(xpath = "//mat-select//span[contains(text(),'Course')]")
+    @FindBy(css = "mat-select[formcontrolname='courseId']")
     public WebElement dropDownCourse;
 
     @FindBy(xpath = "//mat-select//span[contains(text(),'Type')]")

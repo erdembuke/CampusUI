@@ -1,9 +1,11 @@
 package StepDefinitions;
 
 import Pages.DialogContents;
+import Pages.NavigationTabs;
 import Utilities.GWD;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import java.awt.*;
@@ -11,8 +13,6 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 public class AssignmentTeacher {
-
-    WebDriver driver;
     DialogContents dc=new DialogContents();
 
     @And("User fill out the form in Dialog Content")
@@ -22,9 +22,9 @@ public class AssignmentTeacher {
 
     @And("Fill the Text Description")
     public void fillTheTextDescription() {
-        driver.switchTo().frame(0);
-        dc.sendKeysFunction(dc.textArea, "Hucreyi tanımak icin bir proje hazırlayın");
-
+        GWD.getDriver().switchTo().frame(0);
+        dc.sendKeysFunction(dc.textArea,"axxaaxaxa");
+        GWD.getDriver().switchTo().parentFrame();
     }
 
     @And("Add the file from local")
