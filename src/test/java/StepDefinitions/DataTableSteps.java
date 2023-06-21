@@ -2,9 +2,13 @@ package StepDefinitions;
 
 import Pages.DialogContents;
 import Pages.NavigationTabs;
+import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
@@ -42,4 +46,35 @@ public class DataTableSteps {
             dc.sendKeysFunction(element, item.get(1));
         }
     }
+
+    @And("Click on the element in JS")
+    public void clickOnTheElementInJS(DataTable dt) {
+        List<String> dialogItem = dt.asList(String.class);
+        WebElement element = null;
+        
+        for (String buttonList : dialogItem){
+            element = dc.getWebElement(buttonList);
+        }
+        JavascriptExecutor executor = (JavascriptExecutor) GWD.getDriver();
+        executor.executeScript("arguments[0].click();", element);
+        
+    }
+
+    @And("Click on the element in AC")
+    public void clickOnTheElementInAC(DataTable dt) {
+        List<String> dialogItem = dt.asList(String.class);
+        WebElement element=null;
+        for (String buttonList : dialogItem){
+            element = dc.getWebElement(buttonList);
+        }
+
+        Actions actions = new Actions(GWD.getDriver());
+        Action action = actions.moveToElement(element).click(element).build();
+        action.perform();
+
+
+    }
+
+
+
 }
