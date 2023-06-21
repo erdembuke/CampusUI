@@ -1,13 +1,8 @@
 package StepDefinitions;
 
 import Pages.DialogContents;
-import Pages.NavigationTabs;
 import Utilities.GWD;
 import io.cucumber.java.en.And;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
