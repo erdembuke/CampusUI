@@ -1,7 +1,6 @@
 package Pages;
 
 import Utilities.GWD;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -194,6 +193,19 @@ public class DialogContents extends Parent {
     @FindBy(xpath = "//ams-comment//bdi")
     public WebElement sentMessage;
 
+    @FindBy(xpath = "//span[text()='Apply']")
+    public WebElement apply;
+
+    @FindBy(xpath = "//body[@id='tinymce']/p")
+    public WebElement textArea;
+
+    @FindBy(css = "[class='ng-fa-icon'] [focusable='false'][data-icon='plus']")
+    public WebElement assignmentPlus;
+
+    @FindBy(xpath = "//span[text()='From Local']")
+    public WebElement fromLocal;
+
+
     public WebElement getWebElement(String element) {
 
         switch (element) {
@@ -295,6 +307,14 @@ public class DialogContents extends Parent {
                 return paperPlaneBtn;
             case "sentMessage":
                 return sentMessage;
+            case "apply":
+                return apply;
+            case "textArea":
+                return textArea;
+            case "assignmentPlus":
+                return assignmentPlus;
+            case "fromLocal":
+                return fromLocal;
             
         }
         return null;

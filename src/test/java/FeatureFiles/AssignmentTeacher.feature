@@ -12,7 +12,7 @@ Feature: Search Functionality
       |assignmentTab|
 
     And Click on the element in Dialog Content
-      |plus|
+      |addBtn|
 
     And Select Course from drop down menu
 
