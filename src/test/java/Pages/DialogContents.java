@@ -207,6 +207,12 @@ public class DialogContents extends Parent {
 
     @FindBy(css = "[matbadgeposition='below']")
     public WebElement plus;
+    @FindBy(xpath = "//span[text()='Join']")
+    public WebElement joinBtn;
+    @FindBy(xpath = "//span[text()=' Join ']")
+    public WebElement joinBtn2;
+    @FindBy(xpath = "//button[@aria-label='Sadece Dinleyici']")
+    public WebElement listeningBtn;
 
 
     public WebElement getWebElement(String element) {
@@ -320,6 +326,12 @@ public class DialogContents extends Parent {
                 return fromLocal;
             case "plus":
                 return plus;
+            case "joinBtn":
+                return joinBtn;
+            case "joinBtn2":
+                return joinBtn2;
+            case "listeningBtn":
+                return listeningBtn;
             
         }
         return null;

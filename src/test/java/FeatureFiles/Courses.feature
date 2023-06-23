@@ -16,4 +16,17 @@ Feature: Course Functionality
 
         Then Verify that course cirruculum on displayed page
 
+  Scenario: Sending a text during the live session in Video Conference Feature
+
+    And Click on the element in NavigationTabs
+      |calendarTab|
+
+    And Click on the element in Dialog Content
+      |courseFizik|
+      |joinBtn|
+      |joinBtn2|
+
+    And Click on the element in AC
+      | listeningBtn |
+
 
