@@ -6,6 +6,12 @@ Bu proje, TechnoStudy şirketinin Bootcamp öğrencilerine eğitim verdiği "Cam
 
 Proje, Java 8 programlama dili, test otomasyon kütüphaneleri (Selenium, Cucumber, TestNG) ve Maven proje yönetimi kullanılarak geliştirilmiştir. Campus applikasyonundaki belirli feature'ların UI Otomasyon testlerini içermektedir.
 
+## Proje Detaylari
+
+- **Kullanilan Programlama Dili:** ![Java Logo](https://img.icons8.com/color/20/000000/java-coffee-cup-logo.png) Java
+- **Kullanilan IDE:** ![IntelliJ IDEA Ultimate Logo](https://img.icons8.com/color/20/000000/intellij-idea.png) Intellij IDEA Ultimate
+- **Java Version:** 8
+
 ## Kullanılan Kütüphaneler
 
 - selenium-java 4.8.3 
